@@ -1,16 +1,17 @@
-package Ej3;
+package Ej4;
 
-import java.io.*;
-import java.net.*;
 
-public class ServidorMultihilo {
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServidorMultihilo4 {
     public static void main(String[] args) throws Exception {
-        ServerSocket servidor = new ServerSocket(5000);
+        ServerSocket servidor = new ServerSocket(5400);
 
         while (true) {
             Socket cliente = servidor.accept();
             System.out.println("Cliente conectado");
-            new HiloCliente(cliente).start();
+            new HiloCliente4(cliente).start();
         }
     }
 }
