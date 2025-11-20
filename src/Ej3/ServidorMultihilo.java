@@ -9,7 +9,7 @@ public class ServidorMultihilo {
 
         while (true) {
             Socket cliente = servidor.accept();
-            System.out.println("Cliente conectado");
+            System.out.println("EjemploTCP.Cliente conectado");
             new HiloCliente(cliente).start();
         }
     }
